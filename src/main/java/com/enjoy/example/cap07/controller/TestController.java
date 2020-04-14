@@ -1,8 +1,9 @@
 package com.enjoy.example.cap07.controller;
 
-import com.enjoy.example.cap07.service.TestService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.enjoy.example.cap07.service.IUserService;
 import org.springframework.stereotype.Controller;
+
+import javax.annotation.Resource;
 
 /**
  * Auto Created by IntelliJ IDEA.
@@ -13,6 +14,10 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class TestController {
 
-    @Autowired
-    private TestService testService;
+    @Resource
+    private IUserService userService;
+
+    public String helloTest() {
+        return userService.hello();
+    }
 }

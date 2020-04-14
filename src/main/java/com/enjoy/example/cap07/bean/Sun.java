@@ -1,5 +1,6 @@
 package com.enjoy.example.cap07.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 public class Sun {
 
     //方式1：直接在属性中注入@Autowired
+    @Autowired
     private Moon moon;
 
     public Sun() {

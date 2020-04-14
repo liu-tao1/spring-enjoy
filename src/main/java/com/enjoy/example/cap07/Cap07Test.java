@@ -2,6 +2,7 @@ package com.enjoy.example.cap07;
 
 import com.enjoy.example.cap07.bean.Moon;
 import com.enjoy.example.cap07.bean.Sun;
+import com.enjoy.example.cap07.controller.TestController;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -37,5 +38,8 @@ public class Cap07Test {
         Sun sun = context.getBean(Sun.class);
         System.out.println(sun.getMoon());
         //直接从容器中获取的moon和Sun对象注入的moon是同一个实例
+
+        TestController controller = context.getBean(TestController.class);
+        System.out.println(controller.helloTest());
     }
 }
