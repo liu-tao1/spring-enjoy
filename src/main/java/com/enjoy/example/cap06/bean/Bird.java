@@ -25,7 +25,7 @@ public class Bird {
     @Value("#{20-3}")
     private Integer age;
     //可以读取自定义properties配置
-    @Value("${bird.color}")
+    @Value("${bird.test.newValue}")
     private String color;
 
 }
