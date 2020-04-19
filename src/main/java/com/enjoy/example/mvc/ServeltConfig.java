@@ -15,6 +15,7 @@ import org.springframework.web.servlet.config.annotation.*;
         includeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Controller.class})},
         useDefaultFilters = false)
 @EnableWebMvc
+//Java8以后废弃WebMvcConfigurerAdapter
 public class ServeltConfig extends WebMvcConfigurerAdapter {
 
     @Override

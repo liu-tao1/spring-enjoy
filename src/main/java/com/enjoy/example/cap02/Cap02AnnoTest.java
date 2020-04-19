@@ -12,6 +12,13 @@ public class Cap02AnnoTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigMain.class);
 
-        System.out.println(context.getBean("p"));
+        System.out.println("-----bean容器创建完成");
+        String[] definitionNames = context.getBeanDefinitionNames();
+        for (String name : definitionNames) {
+            if (name.startsWith("org.springframework")) {
+                continue;
+            }
+            System.out.println(name);
+        }
     }
 }
