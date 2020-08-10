@@ -7,4 +7,19 @@
         <property name="age" value="18"></property>
         <property name="name" value="tao"></property>
     </bean>
+
+
+    <!--测试构造器循环依赖-->
+    <bean id="a" class="com.enjoy.example.cap01.A">
+        <constructor-arg ref="b"></constructor-arg>
+    </bean>
+
+    <bean id="b" class="com.enjoy.example.cap01.B">
+        <constructor-arg ref="c"></constructor-arg>
+    </bean>
+
+    <bean id="c" class="com.enjoy.example.cap01.C">
+        <constructor-arg ref="a"></constructor-arg>
+    </bean>
+
 </beans>

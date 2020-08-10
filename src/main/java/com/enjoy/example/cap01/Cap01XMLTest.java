@@ -16,5 +16,11 @@ public class Cap01XMLTest {
         //从容器中取bean
         Person per = (Person) app.getBean("per");
         System.out.println(per);
+
+        //传统XmlBeanFactory加载
+        /*BeanFactory bf = new XmlBeanFactory(new ClassPathResource("beans.xml"));
+        //从容器中取bean
+        Person person = (Person) bf.getBean("per");
+        System.out.println(person);*/
     }
 }
